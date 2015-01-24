@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30D77FBB1A742640009C55A9 /* TTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D77FBA1A742640009C55A9 /* TTListViewController.m */; };
+		30D77FBE1A7429A3009C55A9 /* TTProjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D77FBD1A7429A3009C55A9 /* TTProjects.m */; };
+		30D77FC11A7429AE009C55A9 /* TTEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D77FC01A7429AE009C55A9 /* TTEntries.m */; };
+		30D77FC41A742B07009C55A9 /* TTProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D77FC31A742B07009C55A9 /* TTProjectController.m */; };
 		7116F77619421700006C8F06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7116F77519421700006C8F06 /* Foundation.framework */; };
 		7116F77819421700006C8F06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7116F77719421700006C8F06 /* CoreGraphics.framework */; };
 		7116F77A19421700006C8F06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7116F77919421700006C8F06 /* UIKit.framework */; };
@@ -32,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30D77FB91A742640009C55A9 /* TTListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTListViewController.h; sourceTree = "<group>"; };
+		30D77FBA1A742640009C55A9 /* TTListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTListViewController.m; sourceTree = "<group>"; };
+		30D77FBC1A7429A3009C55A9 /* TTProjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTProjects.h; sourceTree = "<group>"; };
+		30D77FBD1A7429A3009C55A9 /* TTProjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTProjects.m; sourceTree = "<group>"; };
+		30D77FBF1A7429AE009C55A9 /* TTEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTEntries.h; sourceTree = "<group>"; };
+		30D77FC01A7429AE009C55A9 /* TTEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTEntries.m; sourceTree = "<group>"; };
+		30D77FC21A742B07009C55A9 /* TTProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTProjectController.h; sourceTree = "<group>"; };
+		30D77FC31A742B07009C55A9 /* TTProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTProjectController.m; sourceTree = "<group>"; };
 		7116F77219421700006C8F06 /* Time-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7116F77519421700006C8F06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7116F77719421700006C8F06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,6 +121,14 @@
 			children = (
 				7116F78419421700006C8F06 /* TTAppDelegate.h */,
 				7116F78519421700006C8F06 /* TTAppDelegate.m */,
+				30D77FB91A742640009C55A9 /* TTListViewController.h */,
+				30D77FBA1A742640009C55A9 /* TTListViewController.m */,
+				30D77FBC1A7429A3009C55A9 /* TTProjects.h */,
+				30D77FBD1A7429A3009C55A9 /* TTProjects.m */,
+				30D77FBF1A7429AE009C55A9 /* TTEntries.h */,
+				30D77FC01A7429AE009C55A9 /* TTEntries.m */,
+				30D77FC21A742B07009C55A9 /* TTProjectController.h */,
+				30D77FC31A742B07009C55A9 /* TTProjectController.m */,
 				7116F78719421700006C8F06 /* Images.xcassets */,
 				7116F77C19421700006C8F06 /* Supporting Files */,
 			);
@@ -241,7 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7116F78619421700006C8F06 /* TTAppDelegate.m in Sources */,
+				30D77FBE1A7429A3009C55A9 /* TTProjects.m in Sources */,
 				7116F78219421700006C8F06 /* main.m in Sources */,
+				30D77FC41A742B07009C55A9 /* TTProjectController.m in Sources */,
+				30D77FBB1A742640009C55A9 /* TTListViewController.m in Sources */,
+				30D77FC11A7429AE009C55A9 /* TTEntries.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +462,7 @@
 				7116F7A019421700006C8F06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7116F7A119421700006C8F06 /* Build configuration list for PBXNativeTarget "Time-TrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +471,7 @@
 				7116F7A319421700006C8F06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
