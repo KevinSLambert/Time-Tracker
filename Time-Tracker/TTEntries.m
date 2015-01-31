@@ -10,4 +10,29 @@
 
 @implementation TTEntries
 
+- (id)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        
+        self.startTime = dictionary[@"startTime"];
+        self.endTime = dictionary[@"endTime"];
+        
+    }
+    return self;
+}
+
+- (NSDictionary *)entryDictionary {
+    
+    NSMutableDictionary *entryDictionary = [NSMutableDictionary new];
+    
+    if (self.startTime) {
+        [entryDictionary setObject:self.startTime forKey:@"startTime"];
+    }
+    if (self.endTime) {
+        [entryDictionary setObject:self.endTime forKey:@"endTime"];
+    }
+    
+    return entryDictionary;
+}
+
 @end

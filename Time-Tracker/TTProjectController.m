@@ -59,7 +59,9 @@
     NSArray *projectDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:@"projectList"];
     
     NSMutableArray *projects = [NSMutableArray new];
-    
+    for (NSDictionary *project in projectDictionaries) {
+        [projects addObject:[[TTProjects alloc] initWithDictionary:project]];
+    }
     
     
     self.projects = projects;
@@ -68,7 +70,9 @@
 -(void)synchronize{
     
     NSMutableArray *projectDictionaries = [NSMutableArray new];
-    
+    for (TTProjects *project in self.projects) {
+        [projectDictionaries addObject:[project projectDictionary]];
+    }
     
     
     [[NSUserDefaults standardUserDefaults] setObject:projectDictionaries forKey:@"projectList"];

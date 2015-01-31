@@ -17,5 +17,13 @@
 -(void)addEntry:(TTEntries *)entry;
 -(void)removeEntry:(TTEntries *)entry;
 
+- (NSDictionary *)projectDictionary;
+- (id)initWithDictionary:(NSDictionary *)dictionary;
+
+- (NSString *)projectTime;
+
+- (void)endCurrentEntry;
+- (void)startNewEntry;
+
 
 @end

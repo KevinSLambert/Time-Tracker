@@ -7,8 +7,9 @@
 //
 
 #import "TTListViewController.h"
+#import "TTProjectController.h"
 
-@interface TTListViewController ()
+@interface TTListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *listTableView;
 
@@ -33,13 +34,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
+    return [[TTProjectController sharedInstance].projects count];
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListCell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ListCell"];
+    }
     
+    TTProjects *project = [TTProjectController sharedInstance].projects[indexPath.row];
+    
+    cell.textLabel.text = project.title;
+    cell.detailTextLabel.text = project.projectTime;
+    
+    return cell;
 }
 
 /*
